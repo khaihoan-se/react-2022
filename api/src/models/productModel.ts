@@ -10,5 +10,10 @@ const productSchema = new mongoose.Schema({
     timestamps: true
 });
 
+productSchema.index({title: 'text'}) // search by title
+
 const Products = mongoose.model("Products", productSchema); // Products is the name of the collection
+
+Products.createIndexes({title: 'text'}) // search by title
+
 export default Products;

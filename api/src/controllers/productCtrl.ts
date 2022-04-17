@@ -1,10 +1,20 @@
-import Products from '../models/productModel'
+import Products from '../models/productModel';
+import { APIfeatures } from '../lib/features';
 
 const productCtrl = {
     getProducts: async (req, res) => {
         try {
-            const products = await Products.find(); // find all products
-            return res.status(200).json(products);  // return all products
+            const features = new APIfeatures(Products.find(), req.query)
+            .paginating().sorting().searching().filtering(); // Products.find()
+
+            const result = await Promise.allSettled([
+                features.query,
+                Products.countDocuments()
+            ])
+            const products = result[0].status === 'fulfilled' ? result[0].value : [];
+            const count = result[1].status === 'fulfilled' ? result[1].value : 0;
+
+            return res.status(200).json({products, count});  // return all products
         } catch (error) {
             return res.status(500).json({ message: error.message }); // 500 Internal Server Error
         }
