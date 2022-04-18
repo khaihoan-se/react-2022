@@ -1,6 +1,10 @@
 import { FC, LazyExoticComponent } from "react";
 
-export interface Router {
-    path: string;
-    component: LazyExoticComponent<FC>;
+export interface Route {
+  path: string;
+  component: LazyExoticComponent<FC>;
+}
+
+export interface LayoutType {
+  children: any;
 }
