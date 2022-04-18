@@ -8,3 +8,9 @@ export interface Route {
 export interface LayoutType {
   children: any;
 }
+
+export interface ImageType {
+  className?: string;
+  src: string;
+  alt: string;
+}
