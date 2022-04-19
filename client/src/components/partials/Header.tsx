@@ -4,11 +4,11 @@ import LogoSrc from "../../asset/logo-coffestyle.png";
 import { MENU__LIST } from "../../constants";
 import { Link, useLocation } from "react-router-dom";
 import classNames from "classnames";
+import NavItem from "../shared/NavItem";
 
 
 const Header: React.FC = () => {
     const router = useLocation();
-    console.log(router)
     const isActive = (href: string) => {
         if(router.pathname === href) return true
     }
@@ -22,16 +22,18 @@ const Header: React.FC = () => {
                 {/* Menu */}
                 <ul className="basis-3/6 flex items-center justify-end gap-8 uppercase text-sm text-gray-500 font-medium">
                     {
-                        MENU__LIST.map((item, index) => 
-                            <li key={index}
-                                className={classNames(
-                                    "cursor-pointer py-1 relative",
-                                    isActive(`${item.path}`) ? "text-gray-800 after:absolute after:bottom-0 after:left-0 after:bg-[#a25f4b] after:h-0.5 after:w-full after:transition-all after:ease-in-out after:duration-300"
-                                    : "hover:text-gray-800 after:absolute after:bottom-0 after:left-0 after:bg-[#a25f4b] after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:ease-in-out after:duration-300"
-                                )}>
-                                <Link to={`${item.path}`}>{item.title}</Link>
-                            </li>
-                        )
+                        MENU__LIST.map((route) => (
+                            <NavItem 
+                            key={route.path} 
+                            href={route.path} 
+                            title={route.title}
+                            className={classNames(
+                                "cursor-pointer py-1 relative",
+                                isActive(`${route.path}`) ? "text-gray-800 after:absolute after:bottom-0 after:left-0 after:bg-[#a25f4b] after:h-0.5 after:w-full after:transition-all after:ease-in-out after:duration-300"
+                                : "hover:text-gray-800 after:absolute after:bottom-0 after:left-0 after:bg-[#a25f4b] after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:ease-in-out after:duration-300"
+                            )}
+                            />
+                        ))
                     }
                 </ul>
                 {/* Cart */}
