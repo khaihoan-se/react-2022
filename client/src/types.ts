@@ -14,3 +14,7 @@ export interface ImageType {
   src: string;
   alt: string;
 }
+
+export interface IconType {
+  className?: string;
+}
