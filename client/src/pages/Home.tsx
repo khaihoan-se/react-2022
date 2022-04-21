@@ -1,12 +1,8 @@
 import React from "react";
 
-
-const Home: React.FC = () => {
-
+const Home = () => {
     return (
-        <>
-            <div>Hello React App Coffe!!!</div>
-        </>
+        <div>Home</div>
     )
 }
 

@@ -10,7 +10,6 @@ const useApi = (url: string) => {
             try {
                 const response = await axios.get(url);
                 setData(response.data);
-                console.log(response.data);
                 setLoading(false);
             } catch (error) {
                 console.log(error);
