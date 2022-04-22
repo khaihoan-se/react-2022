@@ -6,7 +6,8 @@ import Loading from "./components/shared/Loading";
 import productApi from "./api/productApi";
 
 const App = () => {
-   const [ productList, setProductList ] = useState([]);
+   const [ productList, setProductList ] = useState<any>([]);
+   const [ loading, setLoading ] = useState<boolean>(true)
 
    useEffect(() => {
       const fetchProductList = async () => {
@@ -15,7 +16,8 @@ const App = () => {
             const response = await productApi.getAll(params);
             console.log(response)
 
-            setProductList(response.data)
+            setProductList(response)
+            setLoading(false)
          } catch(error) {
             console.log(error)
          }
@@ -23,7 +25,6 @@ const App = () => {
 
       fetchProductList();
    }, []);
-
 
    return (
       <>
