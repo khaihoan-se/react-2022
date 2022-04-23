@@ -27,8 +27,8 @@ const Header = () => {
 
     return (
         <header className={classNames(
-            "px-4 md:px-12 flex items-center h-16 fixed top-0 left-0 w-full z-50 transition duration-500 text-gray-400",
-            isTop && "bg-black"
+            "px-4 md:px-12 flex items-center h-16 fixed top-0 left-0 w-full z-50 transition duration-500 text-gray-600",
+            isTop && "bg-[#fcfbfe]"
         )}>
                 <Link to="/">
                     <Logo src={LogoUrl} alt="Logo" className="relative h-2/3 w-10 mr-8" />
@@ -41,9 +41,9 @@ const Header = () => {
                                 href={item.path}
                                 title={item.title}
                                 className={classNames(
-                                    "hover:text-white transition font-extrabold",
+                                    "hover:text-black transition font-extrabold",
                                     isActive(`${item.path}`) ? "text-red-500"
-                                    : "text-[#d5d3d1]"
+                                    : "text-gray-600"
                                 )}
                             />
                         ))
@@ -51,7 +51,7 @@ const Header = () => {
                 </ul>
                 <div className="flex items-center space-x-4 ml-auto">
                     <Link to="/products">
-                        <SearchIcon className="w-10 hover:text-white transition duration-300 text-primary-500 cursor-pointer" />
+                        <SearchIcon className="w-10 hover:text-black transition duration-300 text-primary-500 cursor-pointer" />
                     </Link>
                     <div className="flex items-center space-x-2">
                         <Button title="Đăng nhập" className="transition duration-300 px-3 py-2 rounded-md hover:bg-opacity-80 hover:bg-red-500 bg-red-500 text-white" />

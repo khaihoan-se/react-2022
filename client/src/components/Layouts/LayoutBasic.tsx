@@ -7,7 +7,7 @@ const LayoutBasic: React.FC<LayoutType> = ({children}) => {
     return (
         <div className="content-wrapper">
             <Header /> {/* NavBar */}
-            <main className="main">{children}</main> {/* Main */}
+            <main className="main pt-16">{children}</main> {/* Main */}
             <Footer /> {/* Footer */}
         </div>
     )

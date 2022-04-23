@@ -6,10 +6,11 @@
 
 body { 
     font-family: "Fira Sans", sans-serif;
-    --tw-bg-opacity: 1;
+    /* --tw-bg-opacity: 1;
     background-color: rgb(0 0 0/var(--tw-bg-opacity));
     --tw-text-opacity: 1;
-    color: rgb(255 255 255/var(--tw-text-opacity));
+    color: rgb(255 255 255/var(--tw-text-opacity)); */
+    background-color: #fcfbfe;
     @apply w-full mx-auto; 
 }
 .banner__overlay--down {
@@ -21,6 +22,36 @@ body {
   );
 }
   
-  .banner__overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
+.banner__overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slick-slider {
+  @apply h-full;
+}
+.slick-slider .slick-track, .slick-slider .slick-list {
+  @apply h-full;
+}
+.slick-slide div {
+  @apply h-full;
+}
+/* .slick-prev {
+  right: 0 !important;
+  background-color: red !important;
+}
+.slick-next {
+  right: 0 !important;
+  background-color: red !important;
+}
+.slick-prev, .slick-next {
+  z-index: 900;
+  position: absolute;
+  bottom: 0 !important;
+  right: 0 !important;
+} */
+/* .slick-slide .slick-cloned div {
+  @apply h-full w-full;
+}
+.slick-slide .slick-active .slick-current div {
+  @apply h-full w-full;
+} */
