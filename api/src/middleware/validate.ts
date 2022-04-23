@@ -1,5 +1,5 @@
 export const checkProductData = async (req, res, next) => {
-    const { title, image, description, category, price } = req.body;
+    const { title, image, banner, description, category, price } = req.body;
     const errors = [];
 
     for(const key in req.body){
