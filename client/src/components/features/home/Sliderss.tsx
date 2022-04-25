@@ -6,7 +6,7 @@ const Sliderss = () => {
     return (
         <div className="h-full bg-black mx-4 md:mx-12 rounded-xl relative">
             <Image className="rounded-xl max-w-full min-w-full min-h-full object-cover absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]" src={ImageSlider} alt="alt" />
-            <div className="rounded-xl absolute inset-0 flex flex-col justify-center px-4 banner__overlay md:px-12"></div>
+            {/* <div className="rounded-xl absolute inset-0 flex flex-col justify-center px-4 banner__overlay md:px-12"></div> */}
             {/* textbox */}
             {/* <div className="absolute left-12 top-1/2 -translate-y-1/2 w-full md:w-[45%] text-white">
                 <h1 className="text-2xl font-bold uppercase md:text-4xl line-clamp-2 sm:line-clamp-3 md:line-clamp-4">Lúc Đó, Tôi Đã Chuyển Sinh Thành Slime</h1>
