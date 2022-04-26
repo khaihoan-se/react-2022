@@ -18,3 +18,8 @@ export interface ImageType {
 export interface IconType {
   className?: string;
 }
+
+export interface SliderType { // test prop slider
+  className?: string;
+  images: ImageType[];
+}
