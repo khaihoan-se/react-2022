@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react";
 
 import Data from "../data.json"
-import Sliderss from "../components/features/home/Sliderss";
+import Sliders from "../components/features/home/Sliders";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import ToolsHome from "../components/features/home/ToolsHome";
 
 const Home = () => {
     const [ data, setData ] = useState(Data.products);
@@ -22,14 +23,23 @@ const Home = () => {
     };
     return (
         <div>
-            <div className="group w-full h-[550px] overflow-hidden">
+            <div className="group relative w-full h-[450px] overflow-hidden">
                 <Slider {...settings} className="w-full h-full">
-                    <Sliderss />
-                    <Sliderss />
-                    <Sliderss />
-                    <Sliderss />
+                    {
+                        data.map(item => <Sliders 
+                                key={item._id}
+                                banner={item.banner} 
+                                description={item.description} 
+                                price={item.price} 
+                                image={item.image}
+                                title={item.title}
+                                category={item.category}
+                            />
+                        )
+                    }
                 </Slider>
             </div>
+            <ToolsHome />
         </div>
     )
 }

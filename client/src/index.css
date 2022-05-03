@@ -6,24 +6,25 @@
 
 body { 
     font-family: "Fira Sans", sans-serif;
-    /* --tw-bg-opacity: 1;
+    --tw-bg-opacity: 1;
     background-color: rgb(0 0 0/var(--tw-bg-opacity));
     --tw-text-opacity: 1;
-    color: rgb(255 255 255/var(--tw-text-opacity)); */
-    background-color: #fcfbfe;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    /* background-color: #fcfbfe; */
     @apply w-full mx-auto; 
 }
 .banner__overlay--down {
-  background-image: linear-gradient(
-    to bottom,
-    transparent 10%,
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 1)
-  );
+  background-color: rgba(0, 0, 0, 0.7);
 }
   
 .banner__overlay {
   background-color: rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(
+    to left,
+    transparent 10%,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 1)
+  );
 }
 
 .slick-slider {
@@ -32,26 +33,6 @@ body {
 .slick-slider .slick-track, .slick-slider .slick-list {
   @apply h-full;
 }
-.slick-slide div {
+.slick-slide > div {
   @apply h-full;
 }
-/* .slick-prev {
-  right: 0 !important;
-  background-color: red !important;
-}
-.slick-next {
-  right: 0 !important;
-  background-color: red !important;
-}
-.slick-prev, .slick-next {
-  z-index: 900;
-  position: absolute;
-  bottom: 0 !important;
-  right: 0 !important;
-} */
-/* .slick-slide .slick-cloned div {
-  @apply h-full w-full;
-}
-.slick-slide .slick-active .slick-current div {
-  @apply h-full w-full;
-} */

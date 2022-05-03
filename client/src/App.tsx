@@ -4,6 +4,7 @@ import { routes } from "./routes";
 import NotFound from "./pages/NotFound";
 import Loading from "./components/shared/Loading";
 
+
 const App = () => {
 
    return (

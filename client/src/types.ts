@@ -20,6 +20,10 @@ export interface IconType {
 }
 
 export interface SliderType { // test prop slider
-  className?: string;
-  images: ImageType[];
+  banner: string;
+  title: string;
+  description: string;
+  price: number;
+  category: string;
+  image: string;
 }
