@@ -11,6 +11,18 @@
             "createdAt": "2022-04-22T13:39:47.768Z",
             "updatedAt": "2022-04-22T13:40:41.276Z",
             "__v": 0
+        },
+        {
+            "_id": "5",
+            "title": "Lúc Đó, Tôi Đã Chuyển Sinh Thành Slime",
+            "image": "https://res.cloudinary.com/figdom/image/upload/v1650634815/anime/bx108511-PufFordLNyIb_iwxc5l.jpg",
+            "banner": "https://res.cloudinary.com/figdom/image/upload/v1650990575/anime/rimuru_wuqfhp.png",
+            "description": "Tensei-shitara Slime datta ken, hay gọi tắt là Tensura là loạt light novel kỳ ảo do Fuse sáng tác và Mitz Vah vẽ minh hoạ. Tiểu thuyết được đăng trực tuyến trên trang web xuất bản tiểu thuyết do người dùng viết tên là Shōsetsuka ni Narō từ năm 2013 đến năm 2016.",
+            "category": "Anime",
+            "price": 1800,
+            "createdAt": "2022-04-22T13:39:47.768Z",
+            "updatedAt": "2022-04-22T13:40:41.276Z",
+            "__v": 0
         }
     ],
     "count": 5
