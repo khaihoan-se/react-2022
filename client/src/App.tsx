@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import { routes } from "./routes";
-import NotFound from "./pages/NotFound";
-import Loading from "./components/shared/Loading";
+import { routes } from "routes";
+import NotFound from "pages/NotFound";
+import Loading from "components/shared/Loading";
 
 
 const App = () => {

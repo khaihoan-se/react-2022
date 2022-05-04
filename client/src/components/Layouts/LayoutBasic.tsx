@@ -1,7 +1,7 @@
 import React from "react";
-import Footer from "../partials/Footer";
-import { LayoutType } from "../../types"
-import Header from "../partials/Header";
+import Footer from "components/partials/Footer";
+import { LayoutType } from "types"
+import Header from "components/partials/Header";
 import { useLocation } from "react-router-dom";
 
 const LayoutBasic: React.FC<LayoutType> = ({children}) => {

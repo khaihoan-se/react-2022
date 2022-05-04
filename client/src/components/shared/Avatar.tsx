@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "./Image";
+import Image from "components/shared/Image";
 
 interface AvatarProps {
     src: string;

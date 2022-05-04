@@ -1,5 +1,5 @@
 import React from "react";
-import { IconType } from "../../types";
+import { IconType } from "types";
 
 const MenuIcon:React.FC<IconType> = ({ className }) => {
     return (

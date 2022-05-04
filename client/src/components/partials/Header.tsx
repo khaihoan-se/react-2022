@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import classNames from "classnames";
 import { useLocation } from "react-router-dom";
-import { MENU__LIST } from "../../constants";
+import { MENU__LIST } from "constants/index";
 // import Button from "../shared/Button";
-import Logo from "../shared/Logo";
-import NavItem from "../shared/NavItem";
-import Avatar from "../shared/Avatar";
-import LogoUrl from "../../asset/logo2.jpeg"
+import Logo from "components/shared/Logo";
+import NavItem from "components/shared/NavItem";
+import Avatar from "components/shared/Avatar";
+import LogoUrl from "asset/logo2.jpeg"
 
 const Header = () => {
     const [isTop, setIsTop] = useState(false);
