@@ -7,11 +7,10 @@ import { useLocation } from "react-router-dom";
 const LayoutBasic: React.FC<LayoutType> = ({children}) => {
     const router = useLocation()
     return (
-        <div className="content-wrapper">
+        <div className="content-wrapper noselect">
             {
                 router.pathname === '/login' ? null : <Header />
             }
-            {/* <Header /> */}
             <main className="main">{children}</main> {/* Main */}
             {
                 router.pathname === '/login' ? null : <Footer />
