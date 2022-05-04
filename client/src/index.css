@@ -9,18 +9,8 @@
   font-display: fallback;
 }
 /* The Scientist */
+/* font-family: 'Nunito', sans-serif; */
 
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-
-body { 
-  font-family: 'Nunito', sans-serif;
-  @apply w-full m-auto text-text-cl bg-[#ffffff] max-w-container-max-width text-base; 
-}
-.container {
-  @apply w-full mx-auto px-6 max-w-container-width;
-}
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
