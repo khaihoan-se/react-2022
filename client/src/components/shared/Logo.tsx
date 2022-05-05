@@ -1,15 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { LogoDiv } from "GlobalStyles";
 
-interface LogoType {
-    className?: string;
-}
-
-const Logo: React.FC<LogoType> = ({ className }) => {
+const Logo = () => {
     return (
-        <div className={className}>
-            <Link to='/'>KhaiHoan</Link>
-        </div>
+        <LogoDiv>
+            <Link to="/">KhaiHoan</Link>
+        </LogoDiv>
     )
 }
 
