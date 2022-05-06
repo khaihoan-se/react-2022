@@ -10,7 +10,7 @@ const useDocumentTitle = (title: string, prevailOnUnmount:boolean = false) => {
         if (!prevailOnUnmount) {
         document.title = defaultTitle.current;
         }
-    }, [])
+    }, [prevailOnUnmount])
 
 }
 export default useDocumentTitle

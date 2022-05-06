@@ -22,7 +22,7 @@ const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsTop(window.scrollY > 600)
+            setIsTop(window.scrollY > 700)
         }
         document.addEventListener('scroll', handleScroll)
     }, [])
@@ -33,12 +33,13 @@ const Header = () => {
     return (
         <Nav isTop={isTop}>
             <HeaderContainer>
+                {/* Logo */}
                 <Logo title="KhaiHoan" />
                 {/* Menu desktop */}
                 <HeaderMenuDesktop>
                     {
                         MENU__LIST.map((item: any) => (
-                            <MenuItemDesktop key={item.path} href={item.path} title={item.title} icon={item.icon} />
+                            <MenuItemDesktop key={item.path} href={item.path} title={item.title} icon={item.icon} tables={item.tables} />
                         ))
                     }
                 </HeaderMenuDesktop>
@@ -56,14 +57,15 @@ const Header = () => {
                         }
                     </HeaderMenuMobileUl>
                 </HeaderMenuMobile>
-                {/* <Button title="Avatar" /> */}
+                {/* Button Login */}
                 <HeaderButtonLogin>
                     <Button title="Login" icon={
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                         </svg>
                     }/>
                 </HeaderButtonLogin>
+                {/* Button Open Menu */}
                 <HeaderButtonMenu onClick={handleOpenMenuMobile}>
                     <Button title="Menu" />
                 </HeaderButtonMenu>

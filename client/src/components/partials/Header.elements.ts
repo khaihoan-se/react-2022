@@ -44,7 +44,7 @@ export const HeaderMenuDesktop = styled.ul`
     display: flex;
     align-items: center;
     height: 100%;
-
+    
     ${mediaQueries.mediaQueryXS} {
         display: none;
     }

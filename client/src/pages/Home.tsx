@@ -1,11 +1,12 @@
-import { Container, P } from "styles/GlobalStyles";
+import { Container } from "styles/GlobalStyles";
 import useDocumentTitle from "hooks/useDocumentTitle";
+import Sliders from "components/features/home/Sliders";
 
 const Home = () => {
     useDocumentTitle('The leading data onboarding platform for')
     return (
         <Container>
-            <P>Importing data into CSV templates, building custom import scripts, or running lengthy implementation projects are not actually solving the root of your data onboarding problem.</P>
+            <Sliders />
         </Container>
     )
 }
