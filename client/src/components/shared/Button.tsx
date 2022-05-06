@@ -1,13 +1,17 @@
 import React from "react";
-
+import { Buttons } from "styles/GlobalStyles"
 interface ButtonTypeProps {
     title: string;
-    className?: string;
+    icon?: any;
+    onClick?: () => void;
 }
 
-const Button: React.FC<ButtonTypeProps> = (props) => {
+const Button: React.FC<ButtonTypeProps> = ({ title, icon, onClick}) => {
     return (
-        <button className={props.className}>{props.title}</button>
+        <Buttons onClick={onClick}>
+            {title}
+            {icon}
+        </Buttons>
     )
 }
 

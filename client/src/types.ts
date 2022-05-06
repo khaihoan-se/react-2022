@@ -27,3 +27,11 @@ export interface SliderType { // test prop slider
   category: string;
   image: string;
 }
+
+export interface IBreakpoints {
+  xxsMin: number;
+  xsMin: number;
+  smMin: number;
+  mdMin: number;
+  lgMin: number;
+}

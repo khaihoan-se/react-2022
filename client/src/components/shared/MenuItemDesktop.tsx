@@ -1,19 +1,19 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import { colors, sizes } from "styles/Variables";
 
 interface NavItemProps {
     href: string;
     title: string;
-    icon: boolean;
+    icon?: boolean;
 }
 
-const NavItem: React.FC<NavItemProps> = ({href, title, icon}) => {
+const MenuItemDesktop: React.FC<NavItemProps> = ({href, title, icon}) => {
     const router = useLocation();
     const isActive = (href: string) => {
         if(router.pathname === href) return true
     }
-    console.log(router)
     return (
             <NavItemHeader isActive={isActive(`${href}`)}>
                 <Link to={href}>
@@ -38,13 +38,18 @@ const NavItemHeader = styled.li<NavItemHeaderProps>`
         display: flex;
         align-items: center;
         height: 100%;
-        & span {
-            color: ${props => props.isActive ? '#3b2fc9' : '#090b2b'};
-        }
-        & svg {
-            width: 1rem;
-        }
+    }
+    & span {
+        font-size: ${sizes.sizeMenu};
+        color: ${props => props.isActive ? colors.colorMain : colors.colorText};
+        font-weight: 500;
+        font-family: 'PT Serif Caption', serif;
+    }
+    & svg {
+        width: ${sizes.sizeMenu};
+        fill: ${props => props.isActive ? colors.colorMain : colors.colorText};
     }
 `;
 
-export default NavItem;
+
+export default MenuItemDesktop;

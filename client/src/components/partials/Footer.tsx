@@ -1,10 +1,10 @@
-import React from "react";
+import { Footers } from "components/partials/Footer.elements"
 
 const Footer = () => {
     return (
-        <footer>
+        <Footers>
             Footer
-        </footer>
+        </Footers>
     )
 };
 
