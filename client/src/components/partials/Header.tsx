@@ -1,77 +1,20 @@
-import React, { useState, useEffect } from "react"
-import { 
-    Nav, 
-    HeaderContainer, 
-    HeaderMenuDesktop, 
-    HeaderMenuMobile, 
-    HeaderButtonLogin, 
-    HeaderButtonMenu,
-    HeaderMenuMobileNav,
-    HeaderMenuMobileUl
-} from "components/partials/Header.elements"
-import Logo from "components/shared/Logo";
-import MenuItemDesktop from "components/shared/MenuItemDesktop";
-import { MENU__LIST } from "constants/index";
-import Button from "components/shared/Button";
-import MenuItemMobile from "components/shared/MenuItemMobile";
-
-
+import React, { useEffect, useState } from 'react'
+import { Nav, Container } from "components/partials/Header.style"
 const Header = () => {
-    const [ isTop, setIsTop ] = useState(false);
-    const [ isMenuMobile, setIsMenuMobile ] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsTop(window.scrollY > 700)
-        }
-        document.addEventListener('scroll', handleScroll)
-    }, [])
-
-    const handleOpenMenuMobile = () => {
-        setIsMenuMobile(!isMenuMobile)
+  const [isTop, setIsTop] = useState(false);
+  useEffect(() => {
+    const handleActiveHeader = () => {
+      setIsTop(window.scrollY > 80)
     }
-    return (
-        <Nav isTop={isTop}>
-            <HeaderContainer>
-                {/* Logo */}
-                <Logo title="KhaiHoan" />
-                {/* Menu desktop */}
-                <HeaderMenuDesktop>
-                    {
-                        MENU__LIST.map((item: any) => (
-                            <MenuItemDesktop key={item.path} href={item.path} title={item.title} icon={item.icon} tables={item.tables} />
-                        ))
-                    }
-                </HeaderMenuDesktop>
-                {/* Menu mobile */}
-                <HeaderMenuMobile isMenuMobile={isMenuMobile}>
-                    <HeaderMenuMobileNav>
-                        <Logo title="KhaiHoan" />
-                        <Button onClick={handleOpenMenuMobile} title="Close" />
-                    </HeaderMenuMobileNav>
-                    <HeaderMenuMobileUl>
-                        {
-                            MENU__LIST.map(item => (
-                                <MenuItemMobile key={item.path} href={item.path} title={item.title} icon={item.icon} onClick={handleOpenMenuMobile} />
-                            ))
-                        }
-                    </HeaderMenuMobileUl>
-                </HeaderMenuMobile>
-                {/* Button Login */}
-                <HeaderButtonLogin>
-                    <Button title="Login" icon={
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                        </svg>
-                    }/>
-                </HeaderButtonLogin>
-                {/* Button Open Menu */}
-                <HeaderButtonMenu onClick={handleOpenMenuMobile}>
-                    <Button title="Menu" />
-                </HeaderButtonMenu>
-            </HeaderContainer>
-        </Nav>
-    )
+    document.addEventListener('scroll', handleActiveHeader)
+  }, [])
+  return (
+    <Nav isTop={isTop}>
+      <Container>
+        Header
+      </Container>
+    </Nav>
+  )
 }
 
-export default Header;
+export default Header

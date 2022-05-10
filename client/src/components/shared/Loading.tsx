@@ -2,8 +2,7 @@ import React from 'react'
 
 const Loading = () => {
   return (
-    <h2>Loading...</h2>
+    <div>Loading</div>
   )
 }
-
-export default Loading
+export default Loading;

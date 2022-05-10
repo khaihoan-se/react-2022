@@ -5,7 +5,7 @@ export function APIfeatures(query, queryString) {
 
     this.paginating = () => {
         const page = this.queryString.page * 1 || 1; // 1 is the default value
-        const limit = this.queryString.limit * 1 || 5; // 5 is the default value
+        const limit = this.queryString.limit * 1; // 5 is the default value
         const skip = (page - 1) * limit; // 0 is the default value
         this.query = this.query.limit(limit).skip(skip); // find all products
 

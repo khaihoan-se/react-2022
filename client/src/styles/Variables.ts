@@ -1,9 +1,7 @@
 import { IBreakpoints } from "types"
 // Size Variables for the GlobalStyles
 export const sizes = {
-    sizeBase: '1.125rem',
-    size2rem: '2rem',
-    sizeMenu: '15px',
+    sizeBase: '16px',
 }
 // Colors Variables for the GlobalStyles
 export const colors = {
@@ -15,7 +13,7 @@ export const colors = {
 }
 // Fonts Variables for the GlobalStyles
 export const fonts = {
-    fontBase: 'Nunito, sans-serif',
+    fontBase: 'Poppins, sans-serif',
     fontHeading: 'PT Serif Caption, serif',
     fontLogo: 'Prata, serif'
 }
