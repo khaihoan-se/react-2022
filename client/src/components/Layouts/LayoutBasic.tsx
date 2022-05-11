@@ -9,8 +9,10 @@ const LayoutBasic: React.FC<LayoutType> = ({children}) => {
     const router = useLocation()
     const [ screen, setScreen ] = useState(false)
     useEffect(() => {
+        const hendla = window.innerWidth
+        setScreen(hendla < 967)
         const handleScreen = () => {
-            setScreen(window.innerWidth < 976)
+            setScreen(window.innerWidth < 967)
         }
         window.addEventListener('resize', handleScreen)
     }, []);
