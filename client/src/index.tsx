@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import GlobalStyle from 'styles/GlobalStyles';
 import App from './App';
 import { BrowserRouter } from "react-router-dom";
 import axios from 'axios'
 import LayoutBasic from 'components/Layouts/LayoutBasic';
-
+import "styles/styles.scss"
 
 axios.defaults.baseURL = 'http://localhost:5000/api'
 
@@ -20,6 +19,5 @@ root.render(
         <App />
       </LayoutBasic>
     </BrowserRouter>
-    <GlobalStyle />
   </React.StrictMode>
 );

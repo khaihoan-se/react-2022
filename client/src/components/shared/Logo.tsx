@@ -1,9 +1,9 @@
-import React from 'react';
-import Image from "components/shared/Image";
-import LogoUrl from "asset/logo.png";
+import React from "react";
 
 const Logo = () => {
-  return <Image src={LogoUrl} alt="Logo" />
+    return (
+        <h1 className="logo--h1">KhaiHoan</h1>
+    )
 }
 
-export default Logo
+export default Logo;
