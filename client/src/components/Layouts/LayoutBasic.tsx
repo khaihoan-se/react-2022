@@ -4,6 +4,7 @@ import { LayoutType } from "types"
 import Header from "components/partials/Header";
 import { useLocation } from "react-router-dom";
 import LayoutMobile from "./LayoutMobile";
+import Back from "components/partials/Back";
 
 const LayoutBasic: React.FC<LayoutType> = ({children}) => {
     const router = useLocation()
@@ -12,7 +13,7 @@ const LayoutBasic: React.FC<LayoutType> = ({children}) => {
         const hendla = window.innerWidth
         setScreen(hendla < 967)
         const handleScreen = () => {
-            setScreen(window.innerWidth < 967)
+            setScreen(window.innerWidth < 988)
         }
         window.addEventListener('resize', handleScreen)
     }, []);
@@ -20,6 +21,9 @@ const LayoutBasic: React.FC<LayoutType> = ({children}) => {
     :   <>
             {
                 router.pathname === '/login' ? null : <Header />
+            }
+            {
+                router.pathname === '/login' ? null : <Back />
             }
             <main className="main">{children}</main> {/* Main */}
             {

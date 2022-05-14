@@ -1,29 +1,23 @@
-import { useEffect, useState } from 'react'
-import Logo from 'components/shared/Logo'
-import { MENU_LIST } from 'constants/index'
-import { Link, useLocation } from 'react-router-dom'
-import { FiSearch } from "react-icons/fi";
+import Logo from 'components/shared/Logo';
+import { MENU_LIST } from 'constants/index';
+import { Link, useLocation } from 'react-router-dom';
+import { FiSearch, FiChevronDown } from "react-icons/fi";
+import { RiShoppingCartLine } from "react-icons/ri";
+import AvatarUrl from "asset/logo.jpeg"
 
 
 const Header = () => {
    const router = useLocation(); // get router.pathname
-   const [isTop, setIsTop] = useState(false); 
    const isActive = (url: string) => {
       if(router.pathname === url) return true;
    }
-   useEffect(() => {
-      const handleActiveHeader = () => {
-         setIsTop(window.scrollY > 200)
-      }
-
-      document.addEventListener('scroll', handleActiveHeader)
-   }, [])
+  
    return (
-      <header className={`header ${isTop ? 'active' : ''}`}>
+      <header className='header'>
          <div className="container">
             {/* Logo Header */}
             <div className="header__logo">
-               <Logo />
+               <Link to="/"><Logo /></Link>
             </div>
             {/* Header Left */}
             <div className="header__left">
@@ -39,7 +33,23 @@ const Header = () => {
                   <FiSearch />
                </div>
             </div>
-            <div className='header__right'>Header right</div>
+            <div className='header__right'>
+               <div className="header__right--cell header__right--developer">
+                  <span>
+                     Manage Developer
+                     <FiChevronDown />
+                  </span>
+               </div>
+               <div className="header__right--cell header__right--notification">
+                  <RiShoppingCartLine />
+               </div>
+               <div className="header__right--cell header__right--avatar">
+                  <img src={AvatarUrl} alt="" />
+               </div>
+               <div className='header__right--button'>
+                  <button>Create contest</button>
+               </div>
+            </div>
          </div>
       </header>
    )

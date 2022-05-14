@@ -1,16 +1,18 @@
-import express from 'express';
-import productCtrl from '../controllers/productCtrl';
+import express from 'express'
+import productCtr from '../controllers/productCtrl'
 import { checkProductData } from '../middleware/validate'
 
-const router = express.Router();
+const router = express.Router()
+// C.R.U.D (Create, Read, Update, Delete)
 
-router.get('/products', productCtrl.getProducts); // get all products
-router.get('/products/:id', productCtrl.getProduct); // get one product
+router.get('/products', productCtr.getProducts)
 
-router.post('/products', checkProductData, productCtrl.createProduct); // create product
+router.get('/products/:id', productCtr.getProduct)
 
-router.put('/products/:id', checkProductData, productCtrl.updateProduct); // update product
+router.post('/products', checkProductData, productCtr.addProduct)
 
-router.delete('/products/:id', productCtrl.deleteProduct); // delete product
+router.put('/products/:id', checkProductData, productCtr.updateProduct)
+
+router.delete('/products/:id', productCtr.deleteProduct)
 
 export default router;

@@ -1,0 +1,37 @@
+.back {
+    height: 60px;
+    background-color: #fff;
+    z-index: 100;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: initial;
+        padding-right: initial;
+    }
+    &__button {
+        button {
+            border-radius: .5rem;
+            padding: 10px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            border: 1px solid #969daa;
+            cursor: pointer;
+            svg {
+                margin-right: 5px;
+            }
+        }
+    }
+    &__router {
+        font-weight: 500;
+        font-size: 14px;
+        color: #969daa;
+    }
+}
